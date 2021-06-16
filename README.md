@@ -9,3 +9,18 @@
 * Add environment variable (spring function name- product and findproductbyCategories)
 * Upload .jar file
 * Test
+
+# spring boot lambda function using API Gateway trigger
+* In handler class add APIGatewayProxyRequestEvent and response object change List<product> 
+
+public class ProductHandler extends SpringBootRequestHandler< __APIGatewayProxyRequestEvent, List<Product>>__ {
+}
+  
+* same change to function
+  
+  public Function<__APIGatewayProxyRequestEvent,List<Product>__> findproductbyCategories()
+  
+ * add query string parameter
+ * In aws lambda function add trigger API Gateway
+  
+
